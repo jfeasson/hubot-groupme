@@ -4,7 +4,7 @@ TwilioAdapter = require("hubot-twilio").Twilio
 class GroupMe extends TwilioAdapter
   receive_sms: (smsBody, from) ->
     return if smsBody.length is 0
-    user = @userForId from
+    user = @robot.brain.userForId from
 
 		# TODO Assign self.robot.name here instead of 
     # if body.match(/^Nurph\b/i) is null
