@@ -13,7 +13,7 @@ class GroupMe extends TwilioAdapter
     
     if smsBody.indexOf("You've been added to") == 0
       console.log "got init methods"
-      @send_sms "#{@name} joining!", from, (args...)-> console.log args
+      @send_sms "#{@robot.name} joining!", from, (args...)-> console.log args
 
     # GroupMe prepends "(username): " so need to remove that
     message = smsBody.slice smsBody.indexOf(":") + 2 
