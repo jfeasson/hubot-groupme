@@ -10,6 +10,8 @@ class GroupMe extends TwilioAdapter
     # if body.match(/^Nurph\b/i) is null
     #   console.log "I'm adding 'Nurph' as a prefix."
     #   body = 'Nurph' + '' + body
+    
+    console.log "received message from #{user.id}"
 
     if smsBody.indexOf("You've been added to a group with") == 0
       console.log "got init methods"
