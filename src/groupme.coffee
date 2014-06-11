@@ -11,9 +11,7 @@ class GroupMe extends TwilioAdapter
     #   console.log "I'm adding 'Nurph' as a prefix."
     #   body = 'Nurph' + '' + body
     
-    console.log "received message from #{user.id}"
-
-    if smsBody.indexOf("You've been added to a group with") == 0
+    if smsBody.indexOf("You've been added to") == 0
       console.log "got init methods"
       @send_sms "hubot joining!", from, (args...)-> console.log args
 
